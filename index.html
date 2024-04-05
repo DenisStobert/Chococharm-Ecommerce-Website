@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024, initial-scale=1">
+    <title>Шоколадные Цветы Шымкент</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <label for="toggler" class="toggler-overlay" tabindex="-1"></label>
+        <a href="#" class="logo"><img src="/images/logo.png">ChocoCharm <span>.</span></a>
+        <nav class="navbar">
+            <a href="#home" class="active">Главное</a>
+            <a href="#about">О нас</a>
+            <a href="#pay">Оплата</a>
+            <a href="#products">Каталог</a>
+            <a href="#contact">Напишите</a>
+        </nav>
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart cart-icon"></a>
+            <a href="#" class="fas fa-user"></a>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3 class="text">Неповторимый вкус</h3>
+            <span class="text">Искушение сладостью</span>
+            <p class="text">Мгновенное наслаждение</p>
+            <a href="#products" class="btn">Купить Сейчас</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="heading"><span>о</span> нас</h1>
+        <div class="row">
+            <div class="video-container">
+                <video src="/images/video.mp4" loop autoplay muted playsinLine></video>
+                <h3>лучшие продажи</h3>
+            </div>
+            <div class="content">
+                <h3>почему мы?</h3>
+                <p>Мы предлагаем уникальные шоколадные цветы, которые не только восхищают взгляд, но и радуют вкус. Наша продукция создается из высококачественного шоколада с использованием оригинальных рецептов и технологий.</p>
+                <p>Мы заботимся о каждом клиенте и стремимся превзойти ожидания, предлагая исключительный сервис и индивидуальный подход. Выбирая нас, вы выбираете неповторимый вкусовой опыт и яркие эмоции.
+                </p>
+                <a href="https://www.instagram.com/chococharm_17?igsh=NHo3NGJqNTlzZGNk" class="btn">Узнать Больше</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="icons-container" id="pay">
+        <div class="icons">
+            <img src="/images/icon-1.png" alt="">
+            <div class="info">
+                <h3>доставка бесплатно</h3>
+                <span>на все заказы</span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="/images/icon-2.png" alt="">
+            <div class="info">
+                <h3>идеальное сочетание</h3>
+                <span>вкус гарантирован</span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="/images/icon-3.png" alt="">
+            <div class="info">
+                <h3>предложения и купоны</h3>
+                <span>на все заказы</span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="/images/icon-4.png" alt="">
+            <div class="info">
+                <h3>безопасные оплаты</h3>
+                <span>защищено Kaspi</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h1 class="heading">последние <span>продукты</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="/images/1.jpg">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart wishlist-btn" data-name="Тюльпаны" data-price="6000" data-image="/images/1.jpg"></a>
+                        <a href="#" class="cart-btn add-to-cart" data-name="Тюльпаны" data-price="6000" data-image="/images/1.jpg"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="fas fa-share share-btn"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Тюльпаны</h3>
+                    <div class="price">₸6,000 <span>₸8,000</span></div>
+                </div>
+                <div class="share-box">
+                    <button class="share-title">Поделиться</button>
+                    <a href="https://www.facebook.com/dialog/send?app_id=391784643587297&link=https://chococharm.kz/&redirect_uri=https://chococharm.kz/" target="_blank" class="share-option facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="share-option instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=Check out this link! https://chococharm.kz/" target="_blank" class="share-option whatsapp"><i class="fab fa-whatsapp"></i></a>                
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="/images/2.jpg">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart wishlist-btn" data-name="Пионы" data-price="6000" data-image="/images/2.jpg"></a>
+                        <a href="#" class="cart-btn add-to-cart" data-name="Пионы" data-price="6000" data-image="/images/2.jpg"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="fas fa-share share-btn"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Пионы</h3>
+                    <div class="price">₸6,000 <span>₸8,000</span></div>
+                </div>
+                <div class="share-box">
+                    <button class="share-title">Поделиться</button>
+                    <a href="https://www.facebook.com/dialog/send?app_id=391784643587297&link=https://chococharm.kz/&redirect_uri=https://chococharm.kz/" target="_blank" class="share-option facebook"><i class="fab fa-facebook-f"></i></a>                    
+                    <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="share-option instagram"><i class="fab fa-instagram"></i></a>                    
+                    <a href="https://api.whatsapp.com/send?text=Check out this link! https://chococharm.kz/" target="_blank" class="share-option whatsapp"><i class="fab fa-whatsapp"></i></a>                
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="/images/3.jpg">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart wishlist-btn" data-name="Микс Тюльпанов" data-price="6000" data-image="/images/3.jpg"></a>
+                        <a href="#" class="cart-btn add-to-cart" data-name="Микс Тюльпанов" data-price="6000" data-image="/images/3.jpg"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="fas fa-share share-btn"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Микс Тюльпанов</h3>
+                    <div class="price">₸6,000 <span>₸8,000</span></div>
+                </div>
+                <div class="share-box">
+                    <button class="share-title">Поделиться</button>
+                    <a href="https://www.facebook.com/dialog/send?app_id=391784643587297&link=https://chococharm.kz/&redirect_uri=https://chococharm.kz/" target="_blank" class="share-option facebook"><i class="fab fa-facebook-f"></i></a>                    
+                    <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="share-option instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=Check out this link! https://chococharm.kz/" target="_blank" class="share-option whatsapp"><i class="fab fa-whatsapp"></i></a>                
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="/images/4.jpg">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn add-to-cart" data-name="Тюльпаны Ч/Б" data-price="6000" data-image="/images/4.jpg"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="fas fa-share share-btn"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Тюльпаны Ч/Б</h3>
+                    <div class="price">₸6,000 <span>₸8,000</span></div>
+                </div>
+                <div class="share-box">
+                    <button class="share-title">Поделиться</button>
+                    <a href="https://www.facebook.com/dialog/send?app_id=391784643587297&link=https://chococharm.kz/&redirect_uri=https://chococharm.kz/" target="_blank" class="share-option facebook"><i class="fab fa-facebook-f"></i></a>                    
+                    <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="share-option instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=Check out this link! https://chococharm.kz/" target="_blank" class="share-option whatsapp"><i class="fab fa-whatsapp"></i></a>                
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="/images/9.jpg">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn add-to-cart" data-name="Пионы Ч/Б" data-price="6000" data-image="/images/9.jpg"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="fas fa-share share-btn"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Пионы Ч/Б</h3>
+                    <div class="price">₸6,000 <span>₸8,000</span></div>
+                </div>
+                <div class="share-box">
+                    <button class="share-title">Поделиться</button>
+                    <a href="https://www.facebook.com/dialog/send?app_id=391784643587297&link=https://chococharm.kz/&redirect_uri=https://chococharm.kz/" target="_blank" class="share-option facebook"><i class="fab fa-facebook-f"></i></a>                    
+                    <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="share-option instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=Check out this link! https://chococharm.kz/" target="_blank" class="share-option whatsapp"><i class="fab fa-whatsapp"></i></a>                
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="/images/12.jpg">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn add-to-cart" data-name="Сет 'Королева'" data-price="6000" data-image="/images/12.jpg"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="fas fa-share share-btn"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Сет 'Королева'</h3>
+                    <div class="price">₸6,000 <span>₸8,000</span></div>
+                </div>
+                <div class="share-box">
+                    <button class="share-title">Поделиться</button>
+                    <a href="https://www.facebook.com/dialog/send?app_id=391784643587297&link=https://chococharm.kz/&redirect_uri=https://chococharm.kz/" target="_blank" class="share-option facebook"><i class="fab fa-facebook-f"></i></a>                    
+                    <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="share-option instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=Check out this link! https://chococharm.kz/" target="_blank" class="share-option whatsapp"><i class="fab fa-whatsapp"></i></a>                
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="/images/7.jpg">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn add-to-cart" data-name="Розы" data-price="6000" data-image="/images/7.jpg"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="fas fa-share share-btn"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Розы</h3>
+                    <div class="price">₸6,000 <span>₸8,000</span></div>
+                </div>
+                <div class="share-box">
+                    <button class="share-title">Поделиться</button>
+                    <a href="https://www.facebook.com/dialog/send?app_id=391784643587297&link=https://chococharm.kz/&redirect_uri=https://chococharm.kz/" target="_blank" class="share-option facebook"><i class="fab fa-facebook-f"></i></a>                    
+                    <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="share-option instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=Check out this link! https://chococharm.kz/" target="_blank" class="share-option whatsapp"><i class="fab fa-whatsapp"></i></a>                
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="/images/11.jpg">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn add-to-cart" data-name="Сет 'Мама'" data-price="6000" data-image="/images/11.jpg"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="fas fa-share share-btn"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Сет 'Мама'</h3>
+                    <div class="price">₸6,000 <span>₸8,000</span></div>
+                </div>
+                <div class="share-box">
+                    <button class="share-title">Поделиться</button>
+                    <a href="https://www.facebook.com/dialog/send?app_id=391784643587297&link=https://chococharm.kz/&redirect_uri=https://chococharm.kz/" target="_blank" class="share-option facebook"><i class="fab fa-facebook-f"></i></a>                    
+                    <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="share-option instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=Check out this link! https://chococharm.kz/" target="_blank" class="share-option whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    <div class="overlay" id="overlay">
+        <div class="cart-box" id="cartBox">
+            <h3>Корзина</h3>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-footer">
+                <h4>Итого: <span id="cartTotal">0</span>₸</h4>
+                <button id="payCart" class="cart-btn1">Оплатить</button>
+                <button id="placeOrder" class="cart-btn1">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="confirmationModal" style="display: none;">
+        <div class="modal-content">
+            <span class="confirmation-icon"></span>
+            <p id="confirmationText"></p>
+        </div>
+    </div>
+    <div class="modal" id="phoneModal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>Введите ваше имя и номер телефона:</h2>
+            <input type="text" id="customerNameInput" placeholder="Ваше имя" required>
+            <div class="phone-input-container">
+                <select id="countryCodeSelect">
+                    <option value="+7">+7 (Казахстан)</option>
+                    <option value="+1">+1 (Америка)</option>
+                    <option value="+7">+7 (Россия)</option>
+                    <!-- Add more country codes as needed -->
+                </select>
+                <input type="tel" id="phoneNumberInput" placeholder="Phone Number" pattern="\d{10}" required title="Please enter a 10-digit phone number">
+            </div>
+            <button id="submitPhoneNumber">Оформить заказ</button>
+        </div>
+    </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>напишите</span> нам</h1>
+        <div class="row">
+            <form action="https://formsubmit.co/business@chococharm.kz" method="POST">
+                <input type="text" name="name" class="box" placeholder="Имя" required>
+                <input type="email" name="email" class="box" placeholder="Почта" required>
+                <input type="number" name="number" class="box" placeholder="Номер">
+                <textarea name="message" class="box" placeholder="Сообщение" cols="30" rows="10" required></textarea>
+                <input type="submit" value="отправить" class="btn">
+            </form>
+            <div class="wrapper">
+                <div class="button">
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <span>Facebook</span>
+                </div>
+
+                <div class="button">
+                    <div class="icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <span>Whatsapp</span>
+                </div>
+
+                <div class="button"><a href="https://www.instagram.com/chococharm_17?igsh=NHo3NGJqNTlzZGNk">
+                    <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span>Instagram</span>
+                </a></div>
+
+                <div class="button">
+                    <div class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <span>Youtube</span>
+                </div>
+            </div>>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/chococharm_17?igsh=NHo3NGJqNTlzZGNk"><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="#home">Главное</a></li>
+                <li><a href="#about">О Нас</a></li>
+                <li><a href="#pay">Оплата</a></li>
+                <li><a href="#products">Каталог</a></li>
+                <li><a href="#contact">Напишите</a></li>
+            </ul>
+        </div>
+        <div style="text-align: right; bottom: 0;">
+            <script type="text/javascript">
+              //<![CDATA[
+              var tlJsHost = (window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/";
+              document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+              //]]>
+            </script>
+            <script language="JavaScript" type="text/javascript">
+              TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_lg_222x54.png", "POSDV", "none");
+            </script>
+          </div>
+        <div class="credit">
+            &copy; Created by <span> Denis Stobert</span> All Rights Are Reserved.
+        </div>
+    </section>
+
+    
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</body>
+</html>

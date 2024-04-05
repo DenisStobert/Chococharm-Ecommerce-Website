@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="pay.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card-container">
+
+        <div class="front">
+            <div class="image">
+                <img src="/images/chip.png" alt="" class="chip">
+                <img src="/images/read.png" class="read">
+                <img src="/images/middle.png" alt="" class="card-logo">
+                <img src="/images/mastercard.png" alt="Mastercard Logo" class="mastercard-logo">
+                <img src="/images/visa.png" alt="">
+            </div>
+            <div class="card-number-box">#############</div>
+            <div class="flexbox">
+                <div class="box">
+                    <div class="card-holder-name">name</div>
+                </div>
+                <div class="box">
+                    <div class="valid-thru">
+                        <span>VALID</span><br>
+                        <span>THRU</span>
+                    </div>
+                    <div class="expiration">
+                        <span class="exp-month">mm</span>
+                        <span class="exp-year">yy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back">
+            <div class="stripe"></div>
+            <div class="box">
+                <span>cvv</span>
+                <div class="cvv-box"></div>
+                <img src="/images/visa.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <form action="">
+        <div class="inputBox">
+            <span>card number</span>
+            <input type="tel" maxlength="19" class="card-number-input" pattern="\d*">
+        </div>
+        <div class="inputBox">
+            <span>card holder</span>
+            <input type="text" class="card-holder-input">
+        </div>
+        <div class="flexbox">
+            <div class="inputBox">
+                <span>expiration mm</span>
+                <select name="" id="" class="month-input">
+                    <option value="month" selected disabled>month</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>expiration yy</span>
+                <select name="" id="" class="year-input">
+                    <option value="year" selected disabled>year</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>cvv</span>
+                <input type="text" maxlength="3" class="cvv-input">
+            </div>
+        </div>
+        <input type="submit" value="submit" class="submit-btn">
+    </form>
+
+</div>    
+    
+
+
+
+
+
+<script>
+
+document.querySelector('.card-number-input').addEventListener('input', function () {
+    // Remove all non-digit characters and any spaces from the input
+    let value = this.value.replace(/\D+/g, '');
+
+    // Add a space after every 4th digit
+    let formattedValue = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+
+    // Update the value of the input field and the displayed card number
+    this.value = formattedValue; // Set the formatted value back to the input field
+    document.querySelector('.card-number-box').textContent = formattedValue; // Update the display
+
+    // If all characters are deleted, show the placeholder
+    if (this.value.length === 0) {
+        document.querySelector('.card-number-box').textContent = '#############';
+    }
+});
+
+document.querySelector('.card-holder-input').addEventListener('input', function () {
+    let value = this.value;
+
+    // Set the card holder name or the placeholder if it's empty
+    document.querySelector('.card-holder-name').textContent = value.toUpperCase() || 'NAME';
+});
+
+document.querySelector('.month-input').oninput = () => {
+  document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
+}
+
+document.querySelector('.year-input').oninput = () => {
+  document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
+}
+
+document.querySelector('.cvv-input').oninput = () => {
+  document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+}
+
+const cardFront = document.querySelector('.front');
+const cardBack = document.querySelector('.back');
+const cvvInput = document.querySelector('.cvv-input');
+
+cvvInput.addEventListener('focus', () => {
+    cardFront.style.transform = 'perspective(1000px) rotateY(-180deg)';
+    cardBack.style.transform = 'perspective(1000px) rotateY(0deg)';
+});
+
+cvvInput.addEventListener('blur', () => {
+    cardFront.style.transform = 'perspective(1000px) rotateY(0deg)';
+    cardBack.style.transform = 'perspective(1000px) rotateY(180deg)';
+});
+
+cvvInput.addEventListener('input', () => {
+    document.querySelector('.cvv-box').innerText = cvvInput.value;
+});
+const cardContainer = document.querySelector('.card-container');
+
+cardContainer.addEventListener('mousemove', function (e) {
+    const rect = this.getBoundingClientRect();
+    const x = e.clientX - rect.left; // x position within the element
+    const y = e.clientY - rect.top;  // y position within the element
+    const width = rect.width;
+    const height = rect.height;
+
+    // Calculate rotation degrees based on mouse position
+    const rotateY = (x / width - 0.5) * 10; // Rotate horizontally (left/right)
+    const rotateX = -(y / height - 0.5) * 10; // Rotate vertically (up/down)
+
+    this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+});
+
+cardContainer.addEventListener('mouseleave', function () {
+    this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+});
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1313 @@
+:root {
+    --pink: #e84393;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, .05);
+}
+
+.heading span {
+    color: var(--pink);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    background: var(--pink);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .1);
+}
+
+header .logo {
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: -10px;
+}
+
+header .logo span {
+    color: var(--pink);
+}
+
+header .navbar a {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+header .navbar a.active {
+    color: var(--pink);
+}
+
+header .navbar a.active:after,
+header .navbar a:hover:after {
+    content: "";
+    position: absolute;
+    background-color: var(--pink);
+    height: 3px;
+    width: 80%; /* Set width to 100% of the inline-block element */
+    left: 12px; /* Align with the start of the text */
+    bottom: -10px;
+    transition: width 0.3s;
+}
+header .navbar a:after {
+    content: "";
+    position: absolute;
+    background-color: var(--pink);
+    height: 3px;
+    width: 0;
+    left: 12px;
+    bottom: -10px;
+    transition: width 0.3s;
+}
+
+header .navbar a:hover {
+    color: var(--pink);
+}
+
+header .icons a {
+    font-size: 3rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--pink);
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.content {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/images/background.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 100rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    color: #333;
+    width: 100%;
+    border-right: 4px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s, cursor .4s step-end infinite alternate;
+    animation-delay: 1s;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+.home .content span {
+    font-size: 3.5rem;
+    color: var(--pink);
+}
+
+.home .content p {
+    font-size: 2rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    pad: 2rem 0;
+    padding-bottom: 3rem;
+
+}
+
+.about .row .video-container {
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about .row .video-container video {
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    object-fit: cover;
+}
+
+.about .row .video-container h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #333;
+
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+    text-transform: none;
+}
+
+.icons-container {
+    background: rgba(232, 67, 147, .1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-container .icons {
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons-container .icons img {
+    width: 50px;
+    height: 50px;
+    margin-right: 2rem;
+}
+
+.icons-container .icons h3 {
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.icons-container .icons span {
+    color: #999;
+    font-size: 1.3rem;
+}
+
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+
+.products .box-container .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.products .box-container .box .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color: white;
+    background: rgba(255, 51, 153, 0.5);
+    z-index: 1;
+    border-radius: .5rem;
+}
+
+.products .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-left: 2rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img {
+    height: 25rem;
+    width: 25rem;
+}
+
+.products .box-container .box:hover .image img {
+    transform: scale(1.1);
+}
+
+.products .box-container .box .image .icons {
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.products .box-container .box:hover .image .icons {
+    bottom: 0;
+}
+
+.fas.fa-shopping-cart.filled {
+    color: var(--pink);
+}
+
+.fas.fa-shopping-cart::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.fas.fa-shopping-cart {
+    position: relative;
+}
+
+.products .box-container .box:hover .image .icons a {
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: var(--pink);
+    color: #fff;
+}
+
+.products .box-container .box:hover .image .icons .cart-btn {
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width: 100%;
+}
+
+.products .box-container .box:hover .image .icons a:hover {
+    background: #333;
+}
+
+.products .box-container .box .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.products .box-container .box .content .price {
+    font-size: 2.5rem;
+    color: var(--pink);
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+.products .box-container .box .content .price span {
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper {
+    flex-basis: 48%;
+}
+
+.contact .row form {
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+}
+
+.contact .row .image {
+    flex: 1 1 40rem;
+
+}
+
+.contact.row .image img {
+    width: 100%;
+}
+
+.contact .row form .box {
+    pad: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+}
+
+.contact .row form .box:focus {
+    border-color: var(--pink);
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.wrapper .button {
+    margin-left: 0px;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+}
+
+.wrapper .button:hover {
+    width: 200px;
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+    font-size: 20px;
+}
+.wrapper .button:nth-child(1) .icon {
+    color: #4267b2;
+}
+
+.wrapper .button:nth-child(2) .icon {
+    color: #128c7e;
+}
+
+.wrapper .button:nth-child(3) .icon {
+    color: #e1306c;
+}
+
+.wrapper .button:nth-child(4) .icon {
+    color: #ff0000;
+}
+
+
+.wrapper .button:nth-child(1):hover .icon {
+    background: #4267b2;
+    color: black;
+}
+
+.wrapper .button:nth-child(2):hover .icon {
+    background: #128c7e;
+    color: black;
+}
+
+.wrapper .button:nth-child(3):hover .icon {
+    background: #e1306c;
+    color: black;
+}
+
+.wrapper .button:nth-child(4):hover .icon {
+    background: #ff0000;
+    color: black;
+}
+.wrapper.button.icon i {
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span {
+    color: #4267b2;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.wrapper .button:nth-child(2) span {
+    color: #128c7e;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.wrapper .button:nth-child(3) span {
+    color: #e1306c;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.wrapper .button:nth-child(4) span {
+    color: #ff0000;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #111;
+}
+
+.footer .footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.footer .socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.footer .socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.footer .socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.footer .socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footer .footerNav {
+    margin: 30px 0;
+}
+
+.footer .footerNav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footer .footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footer .credit {
+    text-align: center;
+    color: white;
+}
+
+.footer .credit span {
+    color: var(--pink);
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.overlay.show {
+    opacity: 1; /* Make the overlay fully opaque */
+    visibility: visible; /* Show the overlay */
+}
+/* Centered cart box */
+.cart-box.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust the width as needed */
+    height: 70%; /* Adjust the height as needed */
+    background: #fff; /* Set the background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for better visibility */
+    z-index: 10;
+    display: block; /* Ensure the cart box is visible when centered */
+    overflow-y: auto; /* Add scroll if content overflows */
+    border-radius: 10px; /* Optional: add rounded corners */
+}
+.cart-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 70px; /* Adjust this value based on the height of your footer */
+    box-sizing: border-box;
+}
+.cart-box h3 {
+    font-size: 30px;
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure even distribution */
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.quantity-btn {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px;
+    font-weight: 100;
+    transition: transform 0.3s ease, color 0.3s ease; /* Add transition for smooth animation */
+}
+.quantity-btn.increase:hover {
+    transform: rotate(360deg);
+    color: #333;
+}
+
+/* Hover effect for the - button (for larger screens) */
+.quantity-btn.decrease:hover {
+    transform: rotate(-360deg);
+    color: #333;
+}
+
+/* Active (clicked) effect for the + button (for touch screens) */
+@media (hover: none) {
+    .quantity-btn.increase:active {
+        transform: rotate(360deg);
+        color: #333;
+    }
+}
+
+/* Active (clicked) effect for the - button (for touch screens) */
+@media (hover: none) {
+    .quantity-btn.decrease:active {
+        transform: rotate(-360deg);
+        color: #333;
+    }
+}
+.quantity-value {
+    position: relative;
+    padding-bottom: 5px;
+    font-weight: 300; /* Make the font lighter */
+    color: #000; /* Lighten the color */
+}
+.decrease{
+    font-size: 25px;
+}
+.quantity-value::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 20px);
+    height: 1px; /* Make the underline thinner */
+    background-color: #999; /* Lighten the color */
+}
+@keyframes underline-grow {
+    from {
+        width: calc(100% + 20px);
+    }
+    to {
+        width: 0;
+    }
+}
+
+@keyframes underline-shrink {
+    from {
+        width: calc(100% + 20px);
+    }
+    to {
+        width: 0;
+    }
+}
+
+/* Style for the quantity value with animation */
+.quantity-value.animate-grow::after {
+    animation: underline-grow 0.3s forwards;
+}
+
+.quantity-value.animate-shrink::after {
+    animation: underline-shrink 0.3s forwards;
+}
+.cart-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.cart-item-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 15px; /* Add some margin for spacing */
+    font-weight: bolder;
+}
+
+.cart-item-name {
+    font-size: 16px;
+    flex: 2; /* Allow the name to take more space */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-item-quantity,
+.cart-item-price {
+    font-size: 16px;
+    flex: 1; /* Allocate equal space for quantity and price */
+    text-align: center; /* Center the text */
+    text-transform: none;
+
+}
+
+.close-cart {
+    position: absolute; /* Position it at the top right corner */
+    top: 10px;
+    right: 10px;
+    font-size: 24px; /* Increase the size */
+    cursor: pointer;
+}
+
+.cart-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 15px; /* Increase padding for better spacing */
+    background-color: #fff;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.cart-footer h4 {
+    font-size: 20px; /* Increase font size for better readability */
+    margin-bottom: 15px; /* Increase space above the buttons */
+    width: 100%;
+    text-align: center;
+}
+
+.cart-btn1 {
+    border-radius: 5px;
+    background: var(--pink);
+    color: #fff;
+    padding: 12px 25px; /* Increase padding for a larger button */
+    font-size: 18px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+.cart-btn1:hover {
+    background-color: #d11a5f; /* Change hover color to a darker shade of pink */
+}
+.icons {
+    position: relative; /* Add this line */
+}
+.share-title {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    cursor: text; /* Change from pointer to text */
+}
+
+.share-box {
+    position: absolute;
+    top: 25%;
+    left: 100%;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px 5px 5px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 5px;
+    backdrop-filter: blur(10px);
+}
+.share-box.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.share-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.share-option:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2); /* Add a subtle hover effect */
+}
+
+.share-option i {
+    font-size: 24px; /* Increase the font size of the icons */
+    padding: 12px; /* Adjust the padding to maintain the circular shape */
+}
+
+/* Adjust the styles for each social media icon */
+.facebook i {
+    background-color: #3b5998;
+    border-radius: 50%;
+    width: 50px; /* Set the width of the icon */
+    height: 50px; /* Set the height of the icon */
+    display: flex; /* Use flexbox to center the icon */
+    align-items: center; /* Center the icon vertically */
+    justify-content: center; /* Center the icon horizontally */
+}
+
+.instagram i {
+    background-color: #E1306C;
+    border-radius: 50%;
+}
+
+.whatsapp i {
+    background-color: #25d366;
+    border-radius: 50%;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 20; /* Base z-index for modals */
+}
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+.modal-content input[type="text"],
+.modal-content input[type="tel"] {
+    width: calc(100%); /* Adjust the width as needed */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.modal-content i {
+    font-size: 24px; /* Adjust the icon size as needed */
+    margin-bottom: 10px; /* Add some space between the icon and the text */
+}
+
+.modal-content span {
+    display: block; /* Ensure the text is on a new line */
+}
+.modal-content h2{
+    font-size: 20px;
+}
+.modal-content input[type="text"]:focus,
+.modal-content input[type="tel"]:focus {
+    border-color: #aaa; /* Darker border color on focus */
+    outline: none; /* Remove the default outline */
+    background-color: #f0f0f0;
+}
+/* Style the close button */
+.close-modal {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-modal:hover {
+    color: #999;
+}
+
+/* Style the phone input container */
+.phone-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Style the country code select */
+#countryCodeSelect {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f0f0f0; /* Add a background color */
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 5px; /* Round the corners */
+}
+
+/* Style the phone number input */
+#phoneNumberInput {
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 10px;
+    width: calc(100% - 80px);
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 5px; /* Round the corners */
+}
+
+/* Style the submit button */
+#submitPhoneNumber {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--pink);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#submitPhoneNumber:hover {
+    background-color: #d11a5f; /* Darken the background on hover */
+}
+.confirmation-success {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.confirmation-error {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+#confirmationText {
+    font-size: 20px; /* Increase font size */
+    font-weight: bold; /* Make text bolder */
+}
+#confirmationModal .modal-content {
+    width: 80%;
+    max-width: 400px; /* Match the phone modal size */
+    /* Add any other styles to match the phone modal */
+}
+#phoneModal {
+    z-index: 21; /* Ensure phone modal is above the base modal layer */
+}
+#confirmationModal {
+    z-index: 22; /* Ensure confirmation modal is above the phone modal */
+}
+.disable-pointer-events {
+    pointer-events: none;
+}
+.confirmation-icon {
+    font-size: 24px; /* Adjust the size as needed */
+    margin-right: 10px; /* Add some space between the icon and the text */
+}
+
+.success-icon {
+    color: green; /* Green color for success */
+}
+
+.error-icon {
+    color: red; /* Red color for error */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .listProduct {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .listProduct {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+    .home {
+        background-position: center;
+    }
+}
+
+@media (max-width: 853px) {
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: .1rem solid rgba(0, 0, 0, 0.1);
+        display: block;
+    }
+    html .fa-bars {
+        display: block;
+    }
+}
+
+@media (max-width: 1024px) {
+    .home {
+        background-position-x: 85%;
+    }
+    html .fa-bars {
+        display: block;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hide the navbar initially */
+        transition: clip-path 0.3s ease; /* Smooth transition for clip-path */
+        z-index: 10;
+    }
+    
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Reveal the navbar when checked */
+    }
+    header .navbar a.active:after {
+    content: "";
+    position: absolute;
+    background-color: var(--pink);
+    height: 3px;
+    width: 24%; /* Set width to 100% of the inline-block element */
+    left: 12px; /* Align with the start of the text */
+    bottom: 2px;
+    transition: width 0.3s;
+}
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: .1rem solid rgba(0, 0, 0, 0.1);
+        display: block;
+    }
+    .toggler-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 9; /* Below the navbar */
+        cursor: default;
+        display: none; /* Hide by default */
+    }
+    
+    #toggler:checked ~ .toggler-overlay {
+        display: block; /* Show when the navbar is open */
+    }
+    .home .content h3 {
+        font-size: 5rem;
+    }
+    .home .content span {
+        font-size: 2.5rem;
+    }
+    .icons-container .icons h3 {
+        font-size: 2rem;
+    }
+    .icons-container .icons span {
+        font-size: 1.7rem;
+    }
+    .cart-box {
+        width: 90%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .cart-footer {
+        flex-direction: column;
+    }
+    .cart-btn1 {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .home {
+        background-position-x: 80%;
+    }
+    html {
+        font-size: 50%;
+    }
+    .heading {
+        font-size: 3rem;
+    }
+    .home .content h3 {
+        font-size: 3rem;
+    }
+    .cart-box {
+        height: auto; /* Adjust height to content */
+        overflow-y: visible; /* Remove scrolling */
+        padding-bottom: 0; /* Remove padding for footer */
+    }
+    .cart-item {
+        flex-direction: row; /* Keep items in a row */
+        align-items: center; /* Align items in the center */
+    }
+    .cart-item-details {
+        width: 100%; /* Take full width */
+        justify-content: space-between; /* Space out the details */
+    }
+    .cart-footer {
+        position: relative; /* Position footer relative to content */
+    }
+    .cart-item-image {
+        width: 40px; /* Reduce image size */
+        height: 40px;
+    }
+    .cart-item-name {
+        font-size: 14px; /* Reduce font size */
+        flex: 1; /* Allow name to take available space */
+        margin-right: 5px; /* Reduce margin */
+    }
+    .cart-item-quantity {
+        font-size: 14px; /* Reduce font size */
+    }
+    .cart-footer h4 {
+        font-size: 16px;
+    }
+    .cart-btn1 {
+        padding: 8px 0;
+        font-size: 16px;
+    }
+    .quantity-btn {
+        padding: 3px 6px; /* Reduce padding */
+        font-size: 12px; /* Reduce font size */
+    }
+    .cart-item-price {
+        font-size: 14px; /* Reduce font size */
+    }
+}
+
+@media (max-width: 429px) {
+    header .logo {
+        font-size: 20px;
+    }
+    .cart-footer {
+        margin-top: auto; /* Push the footer to the bottom */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 393px) {
+    .cart-box {
+        width: 100%;
+    }
+    .home {
+        background-position-x: 70%;
+    }
+    header .logo {
+        font-size: 15px;
+    }
+
+    .cart-footer {
+        display: flex; /* Use flexbox layout */
+        justify-content: space-between; /* Space out the buttons */
+        margin-top: auto; /* Push the footer to the bottom */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .cart-btn1 {
+        flex: 1; /* Allow buttons to grow and fill the available space */
+    }
+}
+

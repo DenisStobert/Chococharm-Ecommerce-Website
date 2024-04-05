@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+body{
+    background-color: lightpink;
+}
+.container{
+    min-height: 100vh;
+    background: lightpink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+.mastercard-logo {
+    position: absolute;
+    bottom: 15px; /* Adjust as needed */
+    right: 15px; /* Adjust as needed */
+    width: 70px; /* Adjust as needed */
+    height: auto; /* This keeps the aspect ratio intact */
+    z-index: -1; /* Ensure it's above other elements if necessary */
+}
+.image .card-logo {
+    width: 170px !important; /* Or set a specific width */
+    height: 170px !important; /* Or set a specific height */
+    /* Use the following properties if you need to fine-tune the position of the logo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image exactly in the middle */
+    z-index: -1;
+}
+.container form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+}
+
+.container form .inputBox{
+    margin-top: 20px;
+}
+
+.container form .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
+    transition: 0.3s ease;
+}
+
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.container form .submit-btn{
+    width: 100%;
+    background:linear-gradient(45deg, blueviolet, deeppink);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+    transition: transform 0.5s;
+}
+
+.container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background-color: #b19b66;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+    color: #fff; /* Set text color to white */
+    font-family: 'Poppins', sans-serif; /* Or another font if more similar to the reference */
+    letter-spacing: 0.5px;
+}
+.container form .inputBox input:focus,
+.container form .inputBox select:focus {
+    border-color: #555; /* This sets a darker border color when the element is focused */
+    outline: none; /* This removes the default focus highlight */
+}
+.container .card-container .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.container .card-container .front .image img{
+    height: 50px;
+}
+.container .card-container .front .image .read{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.container .card-container .front .card-number-box {
+    position: absolute;
+    width: 100%;
+    bottom: 35%;
+    left: 55%;
+    transform: translateX(-50%);
+    font-size: 28px; /* Adjust font size as needed */
+    letter-spacing: 4px; /* Increase letter-spacing */
+    color: #d4af37; /* Gold color */
+}
+.container .card-container .front .card-number-box,
+.container .card-container .front .card-holder-name,
+.container .card-container .front .expiration {
+    /* Your existing font and color styles */
+    color: -webkit-linear-gradient(45deg, #b89746, #d4af37, #f6e27a, #d4af37, #b89746);; /* Or the color sampled from your card */
+    
+    /* Create a subtle embossed effect */
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2), /* Top-left shadow */
+                 1px 1px 1px rgba(0, 0, 0, 0.7); /* Bottom-right highlight */
+    
+}
+.container .card-container .front .card-holder-name,
+.container .card-container .front .expiration {
+    font-size: 16px; /* Adjust to match the reference image */
+    font-weight: 500; /* Adjust weight as needed */
+}
+.container .card-container .front .expiration{
+    margin-left: 50%;
+}
+.container .card-container .front .flexbox {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align children to the left */
+    width: auto; /* Let it size to fit content */
+}
+.container .card-container .front .image .chip {
+    margin-top: 10%;
+    margin-left: 20px;
+}
+.container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box {
+    margin: 0;
+}
+.container .card-container .front .card-holder-name {
+    position: absolute;
+    bottom: 0px; /* Adjust to place above the expiration date */
+    left: 20px;
+    font-size: 16px; /* Match to the style of the card */
+    color: #d4af37; /* Use the gold color */
+    white-space: nowrap;
+}
+.container .card-container .front .expiration {
+    display: flex; /* Use flexbox to position children */
+    flex-direction: row; /* Align children in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align content to the start (left) */
+    position: absolute;
+    bottom: 30px; /* Adjust to position above the cardholder name */
+    left: 20px;
+    font-size: 16px; /* Match to the style of the card */
+    color: #d4af37; /* Use the gold color */
+}
+
+/* Add a slash between MM and YY */
+.container .card-container .front .expiration .exp-month:after {
+    content: '/';
+    margin: 4px; /* Add some space around the slash */
+}
+.container .card-container .front .flexbox .box span {
+    font-size: 10px; /* Adjust the font size as needed */
+}
+.container .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #b19b66;
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+.container .card-container .front .box .valid-thru {
+    font-size: 10px; /* Size to match the reference image */
+    line-height: 12px; /* Adjust line height to match the size of the MM/YY text */
+    text-align: left; /* Align to the left */
+    margin-bottom: 90%; /* Space between 'VALID THRU' and 'MM/YY' */
+}
+.container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}
